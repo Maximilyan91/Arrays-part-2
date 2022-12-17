@@ -1,11 +1,10 @@
 
-
-
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
         task3();
+        task4();
     }
 
         public static int[] generateRandomArray() { // объявление метода сгенерировать массив
@@ -69,6 +68,15 @@ public class Main {
         }
         double middleValue = (double)sum/(arr.length);
         System.out.println("Средняя сумма трат за месяц составила " + middleValue + " рублей");
+    }
+
+    //Задача 4.
+    public static void task4(){
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.println(reverseFullName[i]);
+        }
 
     }
+
 }
