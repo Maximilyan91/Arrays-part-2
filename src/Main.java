@@ -4,6 +4,7 @@
 public class Main {
     public static void main(String[] args) {
         task1();
+        task2();
     }
 
         public static int[] generateRandomArray() { // объявление метода сгенерировать массив
@@ -36,5 +37,17 @@ public class Main {
         }
         System.out.println("Сумма трат за месяц составила " + sum1 + " рублей");
     }
+    public static void task2() {
+        System.out.println("Задача №2");
+        int[] arr = generateRandomArray();
+        int maxValue = -1;
+        for (int j : arr) {
+            if (j > maxValue) {
+                maxValue = j;
+            }
+        }
+        System.out.println("Максимальная сумма трат за день составила " + maxValue);
 
+
+    }
 }
