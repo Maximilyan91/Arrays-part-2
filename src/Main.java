@@ -17,34 +17,24 @@ public class Main {
 
 
     public static void task1() {
-
-        System.out.println("Задача №1 вариант for");
-
-        int arr[] = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, }; // int[] arr = generateRandomArray(); // объявление массива и вызов метода сгенерироватьМассив
-        System.out.println(arr.length);
         int sum = 0;
+        System.out.println("Задача №1 вариант for:");
+
+        int[] arr = generateRandomArray(); // объявление массива и вызов метода сгенерироватьМассив
+
         for (int i = 0; i < arr.length; i++) {
             sum = sum + arr[i];
-            System.out.println("Сумма трат за " + (i+1) + " составила " + sum);
         }
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
-        System.out.println("Задача №1 вариант for each");
-        arr = generateRandomArray();
+        // Варинат for each
+
+        System.out.println("Задача №1 вариант for each:");
+        int sum1 = 0;
         for (int element : arr) {
-           sum = sum + element;
-          System.out.println(sum);
-            break;
-
+           sum1 = sum1 + element;
         }
-
-
-
+        System.out.println("Сумма трат за месяц составила " + sum1 + " рублей");
     }
-
-
-
-
-
-
 
 }
