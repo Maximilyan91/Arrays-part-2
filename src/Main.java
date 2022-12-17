@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
         public static int[] generateRandomArray() { // объявление метода сгенерировать массив
@@ -16,11 +17,10 @@ public class Main {
             return arr;
         }
 
-
+        // Задача 1.
     public static void task1() {
-        int sum = 0;
         System.out.println("Задача №1 вариант for:");
-
+        int sum = 0;
         int[] arr = generateRandomArray(); // объявление массива и вызов метода сгенерироватьМассив
 
         for (int i = 0; i < arr.length; i++) {
@@ -31,11 +31,11 @@ public class Main {
         // Варинат for each
 
         System.out.println("Задача №1 вариант for each:");
-        int sum1 = 0;
+        sum = 0;
         for (int element : arr) {
-           sum1 += element;
+           sum += element;
         }
-        System.out.println("Сумма трат за месяц составила " + sum1 + " рублей");
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
     }
 
     // Задача 2.
@@ -43,7 +43,7 @@ public class Main {
     public static void task2() {
         System.out.println("Задача №2");
         int[] arr = generateRandomArray();
-        int maxValue = -1;
+        int maxValue = 99999;
         int minValue = 200001;
         for (int j : arr) {
             if (j > maxValue) {
@@ -57,5 +57,18 @@ public class Main {
         }
         System.out.println("Максимальная сумма трат за день составила " + maxValue);
         System.out.println("Минимальная сумма трат за день составила " + minValue);
+    }
+
+   //Задача 3.
+    public static void task3() {
+        System.out.println("Задача №3");
+        int[] arr = generateRandomArray();
+        int sum = 0;
+        for (int element : arr) {
+            sum += element;
+        }
+        double middleValue = (double)sum/(arr.length);
+        System.out.println("Средняя сумма трат за месяц составила " + middleValue + " рублей");
+
     }
 }
