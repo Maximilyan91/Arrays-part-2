@@ -24,7 +24,7 @@ public class Main {
         int[] arr = generateRandomArray(); // объявление массива и вызов метода сгенерироватьМассив
 
         for (int i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
+            sum += arr[i];
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
@@ -33,21 +33,29 @@ public class Main {
         System.out.println("Задача №1 вариант for each:");
         int sum1 = 0;
         for (int element : arr) {
-           sum1 = sum1 + element;
+           sum1 += element;
         }
         System.out.println("Сумма трат за месяц составила " + sum1 + " рублей");
     }
+
+    // Задача 2.
+
     public static void task2() {
         System.out.println("Задача №2");
         int[] arr = generateRandomArray();
         int maxValue = -1;
+        int minValue = 200001;
         for (int j : arr) {
             if (j > maxValue) {
                 maxValue = j;
             }
         }
+        for (int j : arr) {
+            if (j < minValue) {
+                minValue = j;
+            }
+        }
         System.out.println("Максимальная сумма трат за день составила " + maxValue);
-
-
+        System.out.println("Минимальная сумма трат за день составила " + minValue);
     }
 }
